@@ -54,7 +54,7 @@ def get_llite_stats(directory):
         for line in llite_stats:
             item = re.split("\s+", line.rstrip())
             key = item.pop(0)
-            out['lustre_' + fs_name + '_' + key] = int(get_llite_value(key, item))
+            out['lustre_client_' + fs_name + '_' + key] = int(get_llite_value(key, item))
 
     return out
 ##############################################################################
@@ -93,110 +93,110 @@ def metric_init(params):
     # See lustre/llite/lproc_llite.c for complete table of opcodes
     for fs in llite_fs(LLITE_DIR):
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_dirty_pages_hits',
+            'name'        : 'lustre_client_' + fs + '_dirty_pages_hits',
             'description' : 'Dirty page hits from %s' % fs,
             'units'       : 'hits/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_dirty_pages_misses',
+            'name'        : 'lustre_client_' + fs + '_dirty_pages_misses',
             'description' : 'Dirty page misses from %s' % fs,
             'units'       : 'misses/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_read_bytes',
+            'name'        : 'lustre_client_' + fs + '_read_bytes',
             'description' : 'Bytes read from %s' % fs,
             'units'       : 'bytes/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_write_bytes',
+            'name'        : 'lustre_client_' + fs + '_write_bytes',
             'description' : 'Bytes written to %s' % fs,
             'units'       : 'bytes/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_brw_write',
+            'name'        : 'lustre_client_' + fs + '_brw_write',
             'description' : 'brw_write calls to %s' % fs,
             'units'       : 'pages/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_brw_read',
+            'name'        : 'lustre_client_' + fs + '_brw_read',
             'description' : 'brw_read calls to %s' % fs,
             'units'       : 'pages/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_ioctl',
+            'name'        : 'lustre_client_' + fs + '_ioctl',
             'description' : 'ioctl calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_open',
+            'name'        : 'lustre_client_' + fs + '_open',
             'description' : 'open calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_close',
+            'name'        : 'lustre_client_' + fs + '_close',
             'description' : 'close calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_mmap',
+            'name'        : 'lustre_client_' + fs + '_mmap',
             'description' : 'mmap calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_seek',
+            'name'        : 'lustre_client_' + fs + '_seek',
             'description' : 'seek calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_fsync',
+            'name'        : 'lustre_client_' + fs + '_fsync',
             'description' : 'fsync calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         # Not currently recording readdir
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_setattr',
+            'name'        : 'lustre_client_' + fs + '_setattr',
             'description' : 'setattr calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_truncate',
+            'name'        : 'lustre_client_' + fs + '_truncate',
             'description' : 'truncate calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_flock',
+            'name'        : 'lustre_client_' + fs + '_flock',
             'description' : 'flock calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_getattr',
+            'name'        : 'lustre_client_' + fs + '_getattr',
             'description' : 'getattr calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         # Not currently recording dir inode ops (create, mkdir, rmdir, etc.)
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_statfs',
+            'name'        : 'lustre_client_' + fs + '_statfs',
             'description' : 'statfs calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_alloc_inode',
+            'name'        : 'lustre_client_' + fs + '_alloc_inode',
             'description' : 'alloc_inode calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_setxattr',
+            'name'        : 'lustre_client_' + fs + '_setxattr',
             'description' : 'setxattr calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_getxattr',
+            'name'        : 'lustre_client_' + fs + '_getxattr',
             'description' : 'getxattr calls to %s' % fs,
             'units'       : 'calls/s',
         }))
         # Not currently recording listxattr, removexattr
         descriptors.append(create_desc(Desc_Skel, {
-            'name'        : 'lustre_' + fs + '_inode_permission',
+            'name'        : 'lustre_client_' + fs + '_inode_permission',
             'description' : 'inode_permission calls to %s' % fs,
             'units'       : 'calls/s',
         }))
