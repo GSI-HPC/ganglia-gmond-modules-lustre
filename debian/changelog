@@ -1,0 +1,5 @@
+ganglia-monitor-python-module-lustre-client (0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Dennis Klein <d.klein@gsi.de>  Fri, 10 Oct 2014 13:27:47 +0200

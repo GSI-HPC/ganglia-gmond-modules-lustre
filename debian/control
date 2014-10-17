@@ -1,0 +1,13 @@
+Source: ganglia-monitor-python-module-lustre-client
+Section: net
+Priority: optional
+Maintainer: Dennis Klein <d.klein@gsi.de>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: https://github.com/GSI-HPC/ganglia-gmond-modules-lustre
+
+Package: ganglia-monitor-python-module-lustre-client
+Architecture: all
+Depends: ${misc:Depends}, ganglia-monitor-python
+Description: Ganglia python module: lustre-client
+ Ganglia module which reports lustre client stats.
