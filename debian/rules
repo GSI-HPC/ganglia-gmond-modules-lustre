@@ -19,9 +19,13 @@ include /usr/share/dpkg/default.mk
 
 # main packaging script based on dh7 syntax
 %:
-	mv python_modules/lustre.py python_modules/lustre_client.py
-	mv conf.d/lustre.pyconf conf.d/lustre_client.pyconf
-	dh $@ 
+	dh $@
+
+override_dh_install:
+	dh_install
+	PKG=debian/ganglia-monitor-python-module-lustre-client
+	mv $PKG/python_modules/lustre.py $PKG/python_modules/lustre_client.py
+	mv $PKG/conf.d/lustre.pyconf $PKG/conf.d/lustre_client.pyconf
 
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
