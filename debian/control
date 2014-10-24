@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Dennis Klein <d.klein@gsi.de>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: https://github.com/GSI-HPC/ganglia-gmond-modules-lustre
 
 Package: ganglia-monitor-python-module-lustre-client
