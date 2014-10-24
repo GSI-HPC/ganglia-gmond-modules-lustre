@@ -23,7 +23,7 @@ include /usr/share/dpkg/default.mk
 
 override_dh_install:
 	dh_install
-	mv debian/ganglia-monitor-python-module-lustre-client/usr/lib/ganglia-monitor/python_modules/lustre.py debian/ganglia-monitor-python-module-lustre-client/usr/lib/ganglia-monitor/python_modules/lustre_client.py
+	mv debian/ganglia-monitor-python-module-lustre-client/usr/lib/ganglia/python_modules/lustre.py debian/ganglia-monitor-python-module-lustre-client/usr/lib/ganglia/python_modules/lustre_client.py
 	mv debian/ganglia-monitor-python-module-lustre-client/etc/ganglia/conf.d/lustre.pyconf debian/ganglia-monitor-python-module-lustre-client/etc/ganglia/conf.d/lustre_client.pyconf
 
 # debmake generated override targets
