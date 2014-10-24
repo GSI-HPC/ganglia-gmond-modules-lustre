@@ -1,3 +1,9 @@
+ganglia-monitor-python-module-lustre-client (0.1-1~gsi70+1) wheezy; urgency=medium
+
+  * Rebuild for gsi-repository wheezy
+
+ -- Dennis Klein <d.klein@gsi.de>  Fri, 24 Oct 2014 19:08:15 +0200
+
 ganglia-monitor-python-module-lustre-client (0.1-1) unstable; urgency=low
 
   * Initial release
