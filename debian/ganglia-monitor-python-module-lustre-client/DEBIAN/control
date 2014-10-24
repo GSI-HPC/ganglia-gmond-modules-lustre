@@ -1,0 +1,11 @@
+Package: ganglia-monitor-python-module-lustre-client
+Version: 0.1-1
+Architecture: all
+Maintainer: Dennis Klein <d.klein@gsi.de>
+Installed-Size: 57
+Depends: ganglia-monitor-python
+Section: net
+Priority: optional
+Homepage: https://github.com/GSI-HPC/ganglia-gmond-modules-lustre
+Description: Ganglia python module: lustre-client
+ Ganglia module which reports lustre client stats.

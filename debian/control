@@ -8,6 +8,6 @@ Homepage: https://github.com/GSI-HPC/ganglia-gmond-modules-lustre
 
 Package: ganglia-monitor-python-module-lustre-client
 Architecture: all
-Depends: ${misc:Depends}, ganglia-monitor-python
+Depends: ${misc:Depends}, ganglia-monitor-python, python
 Description: Ganglia python module: lustre-client
  Ganglia module which reports lustre client stats.
