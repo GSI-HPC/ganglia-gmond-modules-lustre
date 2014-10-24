@@ -35,3 +35,4 @@ nosetests.xml
 .pydevproject
 
 debian/*.log
+debian/ganglia-monitor-python-module-lustre-client
