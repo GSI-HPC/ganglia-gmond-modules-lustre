@@ -22,8 +22,8 @@ include /usr/share/dpkg/default.mk
 	dh $@
 
 override_dh_install:
-	mv debian/tmp/python_modules/lustre.py debian/tmp/python_modules/lustre_client.py
-	mv debian/tmp/conf.d/lustre.pyconf debian/tmp/conf.d/lustre_client.pyconf
+	mv python_modules/lustre.py debian/tmp/python_modules/lustre_client.py
+	mv conf.d/lustre.pyconf debian/tmp/conf.d/lustre_client.pyconf
 	dh_install
 
 # debmake generated override targets
