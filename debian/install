@@ -1,2 +1,2 @@
-python_modules/lustre_client.py /usr/lib/ganglia/python_modules
-conf.d/lustre_client.pyconf /etc/ganglia/conf.d
+python_modules/lustre.py /usr/lib/ganglia/python_modules
+conf.d/lustre.pyconf /etc/ganglia/conf.d

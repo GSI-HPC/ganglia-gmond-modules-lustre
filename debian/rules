@@ -23,15 +23,12 @@ include /usr/share/dpkg/default.mk
 
 override_dh_install:
 	dh_install
-	mv debian/tmp/python_modules/lustre.py debian/tmp/python_modules/lustre_client.py
-	mv debian/tmp/conf.d/lustre.pyconf debian/tmp/conf.d/lustre_client.pyconf
+	BASEDIR=debian/ganglia-monitor-python-module-lustre-client
+	mv $BASEDIR/usr/lib/ganglia-monitor/python_modules/lustre.py $BASEDIR/usr/lib/ganglia-monitor/python_modules/lustre_client.py
+	mv $BASEDIR/etc/ganglia/conf.d/lustre.pyconf $BASEDIR/etc/ganglia/conf.d/lustre_client.pyconf
 
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
 #override_dh_auto_configure:
 #	dh_auto_configure -- \
 #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
-
-
-
-
