@@ -1,3 +1,10 @@
+ganglia-monitor-python-module-lustre-client (0.2-1~gsi70+1) wheezy; urgency=medium
+
+  * adapt defaults to gsi wheezy rebuild
+  * Backport for gsi-repo
+
+ -- Dennis Klein <d.klein@gsi.de>  Wed, 13 Jan 2016 23:13:06 +0100
+
 ganglia-monitor-python-module-lustre-client (0.2-1) unstable; urgency=medium
 
   * use 64bit precision, ganglia integer are 32bit max
