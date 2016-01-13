@@ -82,8 +82,8 @@ def metric_init(params):
         'name'        : 'XXX',
         'call_back'   : get_value,
         'time_max'    : 60,
-        'value_type'  : 'uint',
-        'format'      : '%u',
+        'value_type'  : 'double',
+        'format'      : '%.0f',
         'units'       : 'ops',
         'slope'       : 'positive', # zero|positive|negative|both
         'description' : 'XXX',
