@@ -1,3 +1,12 @@
+ganglia-monitor-python-module-lustre-client (0.2-1~gsi60+1) squeeze; urgency=medium
+
+  * adapt defaults to squeeze
+  * relax debhelper dependency
+  * default.mk only available with debhelper >=9
+  * Backport for gsi-repo
+
+ -- Dennis Klein <d.klein@gsi.de>  Wed, 13 Jan 2016 23:09:17 +0100
+
 ganglia-monitor-python-module-lustre-client (0.2-1) unstable; urgency=medium
 
   * use 64bit precision, ganglia integer are 32bit max
